@@ -1,0 +1,127 @@
+
+body {
+            background: linear-gradient(90deg, #479E94 0.23%, #A3E3D7 99.74%);
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.login{
+     min-height: 60vh; 
+    width: 25vw;
+    height: 50vh;
+    border-radius: 54px;
+background: rgba(248, 248, 248, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;  
+    margin: 5% auto 10% auto;
+    padding: 30px 20px;
+   
+}
+
+.admin{
+color: #67df71;
+font-family: Inter;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+    
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;        
+    background-color: #fff;
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    overflow: hidden;
+    margin-bottom: 25%;
+    outline: 2px solid black;
+}
+
+.circle img{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    
+}
+
+.buttonlogin{
+    border: none;
+    border-radius: 999px;  
+    width: 30%;
+    height: 10%;
+    padding: 10px 25px;
+    background-color: #B1FFF0;;
+}
+
+
+/*input parts*/
+.type {
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 190px;
+  position: relative;
+  top: -20px;
+  
+}
+
+.type input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 20px;
+  width: 100%;
+}
+
+.type label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.type :is(input:focus, input:valid) {
+  border-color: rgb(150, 150, 200);
+}
+
+.type2 {
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 190px;
+  position: relative;
+}
+
+.type2 input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 20px;
+  width: 100%;
+}
+
+.type2 label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.type2 :is(input:focus, input:valid) {
+  border-color: rgb(150, 150, 200);
+}

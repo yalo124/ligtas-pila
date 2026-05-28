@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+</head>
+<body>
+   
+
+    <div class="container">
+        
+        <ul>
+             <div class="logo">
+                <img src="images/logo.png" alt="logo" class="logoimg">
+                <span class="LIGTAS">LIGTAS</span><span class="PILA">-PILA</span>
+            </div>
+            <br>
+            <!--home-->
+            <li class="list active" data-target="home">
+                <a href="#">
+                    <span class="icon">
+                        <img src="images/home.png" alt="home">
+                    </span>
+                    <span class="title">HOME</span>
+                </a>
+            </li>
+            <!--register-->
+            <li class="list" data-target="register">
+                <a href="#">
+                    <span class="icon">
+                        <img src="images/register.png" alt="home">
+                    </span>
+                    <span class="title">REGISTER</span>
+                </a>
+            </li>
+
+            <!--account-->
+            <li class="list" data-target="account">
+                <a href="#">
+                    <span class="icon">
+                        <img src="images/account.png" alt="home">
+                    </span>
+                    <span class="title">ACCOUNT</span>
+                </a>
+            </li>
+
+            <!--customer service-->
+            <li class="list" data-target="customer_service">
+                <a href="#">
+                    <span class="icon">
+                        <img src="images/support.png" alt="home">
+                    </span>
+                    <span class="title">CUSTOMER SERVICE</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <!--home-->
+        <div id="home" class="section active-section">
+            <h1 class="h1">Stay Home, Stay Safe:</h1>
+            <h1 class="h1-1">Aid Distribution Without the Wait.</h1>
+            <p class="description">Ligtas-Pila is a digital system designed to improve the distribution.  
+                The system helps remove long physical queues during aid distribution. 
+                It also protects vulnerable people such as senior citizens, PWDs, and low-income families from heat, exhaustion, and health risks. 
+                Through remote processing, assistance can be delivered faster, safer, and more organized.</p>
+            <img src="images/image_4.png" class="home_image">
+            <img src="images/logofull.png" class="full-logo">
+            <h2 class="us">About Us</h2>
+            <p class="about">Ligtas-Pila is a non-governmental organization dedicated to restoring dignity, safety, and efficiency to public aid distribution. Born from the urgent need to protect vulnerable sectors such as low-income families, senior citizens, and persons with disabilities (PWDs) from the health risks of extreme weather and grueling physical lines, we leverage data and logic to transform how communities receive support.</p>
+        </div>
+        <!--register-->
+        <div id="register" class="section">
+            <div id="re-main">
+                
+                <h2>Form Completion Guide: Step-by-Step Instructions</h2>
+                <h3>Welcome! Please follow these instructions carefully to ensure your application is processed without any delays.</h3>
+                <br>
+                <h4>Step 1: Personal Information</h4>
+                <p>In the Name section, please break down your full name into the specific fields provided:</p>
+                <ul class="space">
+                    <li>Enter your Last Name, First Name, and Middle Name in their respective boxes.</li>
+                    <li>If you have a Suffix (such as Jr., Sr., or III), enter it in the suffix field. If not, leave it blank.</li>
+                </ul>
+                <br>
+
+                <h4>Step 2: Address Details</h4>
+                <p>Provide your current residential address. Select or type the following in order:</p>
+                <ul class="space">
+                    <li>Region</li>
+                    <li>City</li>
+                    <li>District</li>
+                    <li>Barangay</li>
+                </ul>
+                <br>
+
+                <h4>Step 3: Contact Information</h4>
+                <p>We need a way to reach you regarding your application status. Please provide:</p>
+                <ul class="space">
+                    <li>An active mobile or landline Number.</li>
+                    <li>A valid Email Address that you check regularly.</li>
+                </ul>
+                <br>
+
+                <h4>Step 4: Annual Income Range</h4>
+                <ul class="space">
+                    <li>Select or enter your Annual Income. Please ensure this reflects your current gross yearly earnings.</li>
+                </ul>
+                <br>
+
+                <h4>Step 5: Select Your Condition / Category</h4>
+                <p>Choose the specific option that applies to your current situation. You may select from:</p>
+                <ul class="space">
+                    <li>Unemployed</li>
+                    <li>Transport Worker</li>
+                    <li>Disaster-Affected</li>
+                    <li>Senior Citizen</li>
+                    <li>PWD (Person with Disability)</li>
+                    <li>Medical Assistance</li>
+                    <li>Educational Assistance</li>
+                </ul>
+                <br>
+
+                <h4>Important Note on Document Uploads:</h4>
+                <ul class="space">
+                    <li>If you selected Medical Assistance, you are required to upload a clear photo or PDF of your Medical Bill</li>
+                    <li>If you selected Educational Assistance, you are required to upload a clear photo or PDF of your Tuition Fee Assessment.</li>
+                </ul>
+                <br>
+
+                <h4>Step 6: Valid ID Upload</h4>
+                <ul class="space">
+                    <li>To verify your identity, please upload a digital copy (photo or scanned file) of one Valid ID. Ensure that your name, photo, and birthdate are clearly visible and not blurry.</li>
+                </ul>
+                <br>
+
+                <h4>Final Step: Review and Submit</h4>
+                <p>Before clicking submit, please double-check all your entries and uploaded documents. Once everything is verified, click Submit.</p>
+                <br>
+
+
+                <center><button data-target="re-form" class="register">Register</button></center>
+            </div>
+            
+            <div id="re-form" class="form" style="display: none;">
+                <form action="registration.php" method="post" enctype="multipart/form-data">
+                    <!--FULL NAME-->
+                    <h3>FULL NAME</h3>
+                    <br>
+                    <label for="last-name" class="textlast">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="input">
+
+                    <label for="first-name" class="textfirst">First Name</label>
+                    <input type="text" id="fstname" name="fstname" class="input">
+
+                    <label for="middle-name" class="textmid">Middle Name</label>
+                    <input type="text" id="midname" name="midname" class="input">
+
+                    <label for="suffix" class="textsuf">Suffix</label>
+                    <input type="text" id="suffix" name="suffix" class="input">
+                    <br>
+                    <br>
+                    <br>
+                    <hr>
+                    <!--ADDRESS-->
+                    <br>
+                    <h3>CURRENT ADDRESS</h3>
+                    <br>
+                    <label for="region">Region:</label>
+                    <select id="region" name="region" class="input">
+                        <option value="NULL">Select</option>
+                        <option value="NCR">NCR</option>
+                    </select>
+
+                    <label for="city">City:</label>
+                    <select id="city" name="city">
+                        <option value="Select">Select</option>
+                        <option value="Caloocan">Caloocan</option>
+                        <option value="Malabon">Malabon</option>
+                        <option value="Navotas">Navotas</option>
+                        <option value="Valenzuela">Valenzuela</option> 
+                    </select>
+
+                    <label for="district">District:</label>
+                    <select id="dsitrict" name="district">
+                        <option value="select">select</option>
+                        <option value="District_1">District 1</option>
+                    </select>
+
+                    <label for="barangay">Barangay:</label>
+                    <select id="barangay" name="barangay">
+                        <option value="Select">Select</option>
+                        <option value="Barangay_1">Barangay 1</option>
+                        <option value="Barangay_2">Barangay 2</option>
+                        <option value="Barangay_3">Barangay 3</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="address" class="textadd">Address</label>
+                    <input type="text" id="address" name="address" class="input">
+                    <br>
+                    <br>
+                    <br>
+                    <hr>
+                    <!--CONTACT INFO-->
+                    <br>
+                    <h3>CONTACT INFORMATION</h3>
+                    <br>
+                    <label for="number" class="textnum">number</label>
+                    <input type="text" id="number" name="number" class="input">
+    
+                    <label for="email" class="textmail">Email</label>
+                    <input type="text" id="email" name="email" class="input">
+                    <br>
+                    <br>
+                    <br>
+                    <hr>
+                    <!--INCOME RANGE-->
+                    <br>
+                    <h3>ANNUAL INCOME RANGE</h3>
+                    <br>
+                    <label for="income">Income:</label>
+                    <select id="income" name="income">
+                        <option value="A">Select</option>
+                        <option value="B">No income</option>
+                        <option value="C">below 10,957</option>
+                        <option value="D">10,957 to 21,914</option>
+                    </select>
+                    <br>
+                    <br>
+                    <br>
+                    <hr>
+                   <br>
+                    <!--CONDITION-->
+                    <h3>CONDITION</h3>
+                    <br>
+                    <label for="kondition">Condition:</label>
+                    <select id="kondition" name="kondition" onchange="enableBrand(this)">
+                        <option value="NULL">Select</option>
+                        <option value="unemployed">unemployed</option>
+                        <option value="Transport Worker">Transport Worker</option>
+                        <option value="Disaster Affected">Disaster Affected</option>
+                        <option value="Senior Citizen">Senior Citizen</option>
+                        <option value="PWD">PWD</option>
+                        <option value="Medical Assistance">Medical Assistance</option>
+                        <option value="Educational Assistance">Educational Assistance</option>
+                    </select>
+                    <br>
+                    <!--disaster-->
+                    
+                    <div id="members" class="disaster" >
+                        <label for="members" class="text">Members:</label>
+                        <input type="text" name="members" class="input">
+                    </div>
+                    <br>
+
+                    <!--senior-->
+                
+                    <div id="senior" class="seniors">
+                        <label for="seniors">Status:</label>
+                        <select name="status" id="status">
+                            <option value="Mobile/active">Mobile/active</option>
+                            <option value="Assisted Mobile">Assisted Mobile (uses cane, walker, or wheelchair)</option>
+                            <option value="Bedridden/Non-mobile">Bedridden/Non-mobile</option>
+                        </select>
+                        <br>
+                        
+                        <!--senior medical-->
+                        <label for="medical">Medical Conditions:</label><br>
+                        <input type="checkbox" name="Medical_Conditions[]" value="None">None<br>
+                        <input type="checkbox" name="Medical_Conditions[]" value="Hypertension">Hypertension<br>
+                        <input type="checkbox" name="Medical_Conditions[]" value="Diabetes">Diabetes<br>
+                        <input type="checkbox" name="Medical_Conditions[]" value="Arthritis/Joint issues">Arthritis/Joint issues<br>
+                        <input type="checkbox" name="Medical_Conditions[]" value="Vision/Hearing impairment">Vision/Hearing impairment<br>
+                        <input type="checkbox" name="Medical_Conditions[]" value="Cognitive issues">Cognitive issues (e.g., Dementia, Alzheimer's)<br>
+
+                        <!--assistance-->
+                       
+                        <label for="assistance">Assistance Needed:</label><br>
+                        <input type="checkbox" name="needed[]" value="None">None<br>
+                        <input type="checkbox" name="needed[]" value="Medical/Medicines">Medical/Medicines<br>
+                        <input type="checkbox" name="needed[]" value="Maintenance Foods/Grocery packs">Maintenance Foods/Grocery packs<br>
+                        <input type="checkbox" name="needed[]" value="Assistive Devices (Wheelchair, cane, etc.)">Assistive Devices (Wheelchair, cane, etc.)<br>
+                        <input type="checkbox" name="needed[]" value="Financial/Cash aid">Financial / Cash aid<br>
+                        <input type="checkbox" name="needed[]" value="Companionship/Home visits">Companionship/Home visits<br>
+                    </div>
+
+                    <!--medical assistance-->
+                  
+                    <div id="hospital" class="hospitals">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
+                        <label for="image">Image File:</label>
+                        <input type = "file" id="image" name="image">
+                    </div>
+
+                    <!--education-->
+                  
+                    <div id="education" class="educations">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
+                        <label for="image">Image File:</label>
+                        <input type = "file" id="emage" name="emage">
+                    </div>
+
+                    <br>
+                    <hr>
+                    <!--ID-->
+                    <br>
+                    <h3>VALID</h3>
+                    <br>
+                    <label for="id">Valid Id:</label>
+                        <select id="id" name="id">
+                            <option value="NULL">Select</option>
+                            <option value="e-Card">e-Card</option>
+                            <option value="Employee’s ID">Employee’s ID</option>
+                            <option value="Driver’s License">Driver’s License</option>
+                            <option value="Professional Regulation Commission (PRC) ID">Professional Regulation Commission (PRC) ID</option>
+                            <option value="Passport">Passport</option>
+                            <option value="Senior Citizen ID">Senior Citizen ID</option>
+                            <option value="SSS ID">SSS ID</option>
+                            <option value="Voter’s ID">Voter’s ID</option>
+                            <option value="PhilID/ePhilID">PhilID / ePhilID</option>
+                            <option value="NBI Clearance">NBI Clearance</option>
+                            <option value="Integrated Bar of the Philippines (IBP) ID">Integrated Bar of the Philippines (IBP) ID</option>
+                            <option value="Firearms License">Firearms License</option>
+                            <option value="AFPSLAI ID">AFPSLAI ID</option>
+                            <option value="PVAO ID">PVAO ID</option>
+                            <option value="AFP Beneficiary ID">AFP Beneficiary ID</option>
+                            <option value="BIR (TIN)">BIR (TIN)</option>
+                            <option value="Pag-ibig ID">Pag-ibig ID</option>
+                            <option value="Person’s With Disability (PWD) ID">Person’s With Disability (PWD) ID</option>
+                            <option value="Pantawid Pamilya Pilipino Program (4Ps) ID">Pantawid Pamilya Pilipino Program (4Ps) ID</option>
+                            <option value="Barangay ID">Barangay ID</option>
+                            <option value="Solo Parent ID">Solo Parent ID</option>
+                            <option value="Philippine Postal ID">Philippine Postal ID</option>
+                            <option value="Phil-health ID">Phil-health ID</option>
+                            <option value="School ID">School ID</option>
+                        </select>
+                    <br>
+                    <br>
+                    <label for="eamage" class="valid-id">Choose ID Image</label>
+                    <input type="file" id="eamage" name="eamage" class="file-hidden">
+                    <br>
+                    <br>
+
+                    <button type="submit" class="submit">SUBMIT</button>
+
+                </form>
+            </div>
+        </div>
+        <!--account-->
+        <div id="account" class="section ">
+            <div id="search">
+                <h1>Search Application</h1>
+                <br>
+                    <input type="text" id="searchInput" placeholder="Enter Reference ID" class="reference">
+                <br>
+                    <button onclick="searchID()" class="searchbutton">Search</button>
+                    <br>
+                <div id="result"></div>
+            </div>
+
+        </div>
+        <!--cs-->
+        <div id="customer_service" class="section ">
+            <h1>customer_service</h1>
+        </div>
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>
