@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+    <div class="login" id="loginpage">
+    <p><span class="admin">LOGIN</span></p>
+    <div class="circle">
+        <img src="images/admin.png" alt="logo">
+    </div>
+
+    <!--login form-->
+    <form action="accounts.php" method="POST">
+        <div class="type">
+            <input type="text" id="ID" name="ID" autocomplete="off" required placeholder=" ">
+            <label for="ID">Employee ID</label>
+        </div>
+
+        <div class="type2">
+            <input type="password" id="password" name="password" autocomplete="off" required placeholder=" ">
+            <label for="password">Password</label>
+        </div>
+        <br>
+        <center><button class="buttonlogin" id="loginbutton" type="submit">LOGIN</button></center>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+body {
+    background: linear-gradient(90deg, #479E94 0.23%, #A3E3D7 99.74%);
+    min-height: 100vh;
+  
+}
+
+.login {
+    min-height: 60vh;
+    width: 25vw;
+    border-radius: 54px;
+    background: rgba(248, 248, 248, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% auto 10% auto;
+    padding: 30px 20px;
+    gap: 10px;
+}
+
+.admin {
+    color: #479E94;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10%;
+    outline: 2px solid #479E94;
+}
+
+.circle img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+/* input parts */
+.type {
+    font-family: 'Segoe UI', sans-serif;
+    width: 190px;
+    position: relative;
+    top: -20px;
+ 
+}
+
+.type input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 20px;
+    width: 100%;
+    background-color: white
+}
+
+.type label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+}
+
+.type :is(input:focus, input:valid) {
+    border-color: #479E94;
+}
+
+.type input:focus ~ label,
+.type input:valid ~ label {
+    top: -18px;
+    left: 5px;
+    font-size: 12px;
+    color: #479E94;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.type2 {
+    font-family: 'Segoe UI', sans-serif;
+    width: 190px;
+    position: relative;
+}
+
+.type2 input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 20px;
+    width: 100%;
+    background-color: white;;
+}
+
+.type2 label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+}
+
+.type2 :is(input:focus, input:valid) {
+    border-color: #479E94;
+}
+
+.type2 input:focus ~ label,
+.type2 input:valid ~ label {
+    top: -18px;
+    left: 5px;
+    font-size: 12px;
+    color: #479E94;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.buttonlogin {
+    border: 2px solid #479E94;
+    background-color: #A3E3D7;
+    border-radius: 0.9em;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+    font-weight: 700;
+    width: 220px;
+    height: 45px;
+    margin-top: 10px;
+}
+
+.buttonlogin:hover {
+    background-color: #479E94;
+    color: white;
+}
+
+.database {
+    display: none;
+}
+

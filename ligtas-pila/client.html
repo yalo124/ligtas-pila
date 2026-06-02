@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client</title>
+    <link rel="stylesheet" href="style3.css">
+
+    <!--limit of 2 choices-->
+    <script type="text/javascript">
+        function conditionlimit(checkbox) {
+        var checkboxes = document.querySelectorAll('input[name="kondition[]"]:checked');
+    
+        if(checkboxes.length > 2){
+            alert("Please select only 2 conditions");
+            checkbox.checked = false;
+            enableBrand(checkbox);
+            return false;
+        }
+    }
+    </script>
+
+</head>
+
+<body>
+   
+
+    <div class="container">
+        
+        <ul>
+             <div class="logo">
+                <img src="images/logo.png" alt="logo" class="logoimg">
+                <span class="LIGTAS">LIGTAS</span><span class="PILA">-PILA</span>
+            </div>
+            <br>
+            <!--home-->
+            <li class="list active" data-target="home">
+                <a href="#">
+                    <span class="icon">
+                        <img src="images/home.png" alt="home">
+                    </span>
+                    <span class="title">HOME</span>
+                </a>
+            </li>
+            <!--register-->
+            <li class="list" data-target="register">
+                <a href="#">
+                    <span class="icon">
+                        <img src="images/register.png" alt="home">
+                    </span>
+                    <span class="title">REGISTER</span>
+                </a>
+            </li>
+
+            <!--account-->
+            <li class="list" data-target="account">
+                <a href="#">
+                    <span class="icon">
+                        <img src="images/account.png" alt="home">
+                    </span>
+                    <span class="title">ACCOUNT</span>
+                </a>
+            </li>
+
+            <!--customer service-->
+            <li class="list" data-target="customer_service">
+                <a href="#">
+                    <span class="icon">
+                        <img src="images/support.png" alt="home">
+                    </span>
+                    <span class="title">CUSTOMER SERVICE</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <!--home-->
+        <div id="home" class="section active-section">
+            <h1 class="h1">Stay Home, Stay Safe:</h1>
+            <h1 class="h1-1">Aid Distribution Without the Wait.</h1>
+            <p class="description">Ligtas-Pila is a digital system designed to improve the distribution.  
+                The system helps remove long physical queues during aid distribution. 
+                It also protects vulnerable people such as senior citizens, PWDs, and low-income families from heat, exhaustion, and health risks. 
+                Through remote processing, assistance can be delivered faster, safer, and more organized.</p>
+            <img src="images/image_4.png" class="home_image" alt="home_picture">
+            <img src="images/logofull.png" class="full-logo" alt="logo">
+            <h2 class="us">About Us</h2>
+            <p class="about">Ligtas-Pila is a non-governmental organization dedicated to restoring dignity, safety, and efficiency to public aid distribution. Born from the urgent need to protect vulnerable sectors such as low-income families, senior citizens, and persons with disabilities (PWDs) from the health risks of extreme weather and grueling physical lines, we leverage data and logic to transform how communities receive support.</p>
+        </div>
+        <!--register-->
+        <div id="register" class="section">
+            <div id="re-main">
+                <!--registration instructions-->
+                <h2>Form Completion Guide: Step-by-Step Instructions</h2>
+                <h3>Welcome! Please follow these instructions carefully to ensure your application is processed without any delays.</h3>
+                <br>
+                <h4>Step 1: Personal Information</h4>
+                <p>In the Name section, please break down your full name into the specific fields provided:</p>
+                <ul class="space">
+                    <li>Enter your Last Name, First Name, and Middle Name in their respective boxes.</li>
+                    <li>If you have a Suffix (such as Jr., Sr., or III), enter it in the suffix field. If not, leave it blank.</li>
+                </ul>
+                <br>
+
+                <h4>Step 2: Address Details</h4>
+                <p>Provide your current residential address. Select or type the following in order:</p>
+                <ul class="space">
+                    <li>Region</li>
+                    <li>City</li>
+                    <li>District</li>
+                    <li>Barangay</li>
+                </ul>
+                <br>
+
+                <h4>Step 3: Contact Information</h4>
+                <p>We need a way to reach you regarding your application status. Please provide:</p>
+                <ul class="space">
+                    <li>An active mobile or landline Number.</li>
+                    <li>A valid Email Address that you check regularly.</li>
+                </ul>
+                <br>
+
+                <h4>Step 4: Monthly Income Range</h4>
+                <ul class="space">
+                    <li>Select or enter your Monthly Income. Please ensure this reflects your current gross monthly earnings.</li>
+                </ul>
+                <br>
+
+                <h4>Step 5: Select Your Condition / Category</h4>
+                <p>Choose the specific option that applies to your current situation. You may select from:</p>
+                <ul class="space">
+                    <li>Unemployed</li>
+                    <li>Transport Worker</li>
+                    <li>Disaster-Affected</li>
+                    <li>Senior Citizen</li>
+                    <li>PWD (Person with Disability)</li>
+                    <li>Medical Assistance</li>
+                    <li>Educational Assistance</li>
+                    <li>Burial Assistance</li>
+                </ul>
+                <br>
+
+                <h4>Important Note on Document Uploads:</h4>
+                <ul class="space">
+                    <li>If you selected Medical Assistance, you are required to upload a clear photo or PDF of your Medical Bill</li>
+                    <li>If you selected Educational Assistance, you are required to upload a clear photo or PDF of your Tuition Fee Assessment.</li>
+                    <li>If you selected Burial Assistance, you are required to upload a clear photo or PDF of the Death Certificate.</li>
+                </ul>
+                <br>
+
+                <h4>Step 6: Valid ID Upload</h4>
+                <ul class="space">
+                    <li>To verify your identity, please upload a digital copy (photo or scanned file) of one Valid ID. Ensure that your name, photo, and birthdate are clearly visible and not blurry.</li>
+                </ul>
+                <br>
+
+                <h4>Final Step: Review and Submit</h4>
+                <p>Before clicking submit, please double-check all your entries and uploaded documents. Once everything is verified, click Submit.</p>
+                <br>
+                <br>
+
+
+                <center><button data-target="re-form" class="register">Register</button></center>
+            </div>
+            
+            <div id="re-form" class="form" style="display: none;">
+                <form name="form1"action="registration.php" method="post" enctype="multipart/form-data">
+                    <!--FULL NAME-->
+                    <h3>FULL NAME</h3>
+                    <br>
+                    <label for="last-name" class="textlast">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="input">
+
+                    <label for="first-name" class="textfirst">First Name</label>
+                    <input type="text" id="fstname" name="fstname" class="input">
+
+                    <label for="middle-name" class="textmid">Middle Name</label>
+                    <input type="text" id="midname" name="midname" class="input">
+
+                    <label for="suffix" class="textsuf">Suffix</label>
+                    <input type="text" id="suffix" name="suffix" class="input">
+                    <br>
+                    <br>
+                    <br>
+                    <hr>
+                    <!--ADDRESS-->
+                    <br>
+                    <h3>CURRENT ADDRESS</h3>
+                    <br>
+                    <label for="region">Region:</label>
+                    <select id="region" name="region" class="input">
+                        <option value="NULL">Select</option>
+                        <option value="NCR">National Capital Region (NCR)</option>
+                    </select>
+
+                    <label for="city">City:</label>
+                    <select id="city" name="city">
+                        <option value="Select">Select</option>
+                        <option value="Quezon City">Quezon City</option>
+                    </select>
+
+                    <label for="district">District:</label>
+                    <select id="dsitrict" name="district">
+                        <option value="select">select</option>
+                        <option value="District_2">District 2</option>
+                    </select>
+
+                    <label for="barangay">Barangay:</label>
+                    <select id="barangay" name="barangay">
+                        <option value="Select">Select</option>
+                        <option value="Batasan Hills">Batasan Hills</option>
+                        
+                    </select>
+                    <br>
+                    <br>
+                    <label for="address" class="textadd">Address</label>
+                    <input type="text" id="address" name="address" class="input">
+                    <br>
+                    <br>
+                    <br>
+                    <hr>
+                    <!--CONTACT INFO-->
+                    <br>
+                    <h3>CONTACT INFORMATION</h3>
+                    <br>
+                    <label for="number" class="textnum">number</label>
+                    <input type="text" id="number" name="number" class="input">
+    
+                    <label for="email" class="textmail">Email</label>
+                    <input type="text" id="email" name="email" class="input">
+                    <br>
+                    <br>
+                    <br>
+                    <hr>
+                    <!--INCOME RANGE-->
+                    <br>
+                    <h3>MONTHLY INCOME RANGE</h3>
+                    <br>
+                    <label for="income">Income:</label>
+                    <select id="income" name="income">
+                        <option value="NULL">Select</option>
+                        <option value="No income">No income</option>
+                        <option value="Less than PhP 12,030 per month">Less than PhP 12,030 per month</option>
+                        <option value="Between PhP 12,030 to PhP 24,060 per month">Between PhP 12,030 to PhP 24,060 per month</option>
+                        <option value="Between PhP 24,060 to PhP 48,120 per month">Between PhP 24,060 to PhP 48,120 per month</option>
+                        <option value="Above PhP 48,120">Above PhP 48,120</option>
+                    </select>
+                    <br>
+                    <br>
+                    <br>
+                    <hr>
+                   <br>
+                    <!--CONDITION-->
+                    <h3>CONDITION</h3>
+                    <br>
+                    <h5>*Reminder: Select the 2 that best apply</h5>
+                    <label for="kondition" class="kondi">Condition:</label>
+                    <br>
+                        <div class="option">
+                            <input type="checkbox" name="kondition[]" value="unemployed" onchange="enableBrand(this)" onclick="conditionlimit(this)" class="ui-checkbox">
+                            Unemployed<br>
+                        </div>
+
+                        <div class="option">
+                            <input type="checkbox" name="kondition[]" value="Transport Worker"onchange="enableBrand(this)" onclick="conditionlimit(this)" class="ui-checkbox">
+                            Transport Worker<br>
+                        </div>
+
+                        <div class="option">
+                            <input type="checkbox" name="kondition[]" value="Natural Disaster Victims" onchange="enableBrand(this)" onclick="conditionlimit(this)" class="ui-checkbox">
+                             Natural Disaster Victims<br>
+                        </div>
+                            
+                        <div class="option">
+                            <input type="checkbox" name="kondition[]" value="Senior Citizen"onchange="enableBrand(this)" onclick="conditionlimit(this)" class="ui-checkbox">
+                            Senior Citizen<br>
+                        </div>
+
+                        <div class="option">
+                            <input type="checkbox" name="kondition[]" value="PWD"onchange="enableBrand(this)" onclick="conditionlimit(this)" class="ui-checkbox">
+                            Person With Disability<br>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="checkbox" name="kondition[]" value="Medical Assistance" onchange="enableBrand(this)" onclick="conditionlimit(this)" class="ui-checkbox">
+                            Medical Assistance<br>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="checkbox" name="kondition[]" value="Educational Assistance" onchange="enableBrand(this)" onclick="conditionlimit(this)" class="ui-checkbox">
+                            Educational Assistance<br>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="checkbox" name="kondition[]" value="Burial Assistance"onchange="enableBrand(this)" onclick="conditionlimit(this)" class="ui-checkbox">
+                            Burial Assistance<br>
+                        </div>
+                    
+                      
+                       
+                    <!--unemployment-->
+                    <div id="unemploy" class="unempl">
+                         <br>
+                        <h4>UNEMPLOYMENT ASSISTANCE</h4>
+                        <br>
+                        <label for="unemployed">Days of Unemployed:</label>
+                        <select id="select-unemploy" name="select-unemploy" onchange="enableBrand(this)">
+                            <option value="NULL">Select</option>
+                            <option value="no employment days">No Employment Days</option>
+                            <option value="2 weeks">2 Weeks</option>
+                            <option value="3 weeks">3 Weeks</option>
+                            <option value="1-2 months">1-2 Months</option>
+                            <option value="others-unemployed">Others</option>
+                        </select>
+                        <br>
+                        <div id="other-unemployment" class="other-unemployment">
+                            <label for="unemploy-box">Others:</label>
+                            <input type="text" name="unemploy-people" class="input">
+                        </div>    
+                    </div>
+                    <br>
+                    <!--transport workers-->
+                    <div id="transport" class="tw">
+                       <h4>TRANSPORT WORKER ASSISTANCE</h4>
+                       <br>
+                       <label for="tranport">Assistance:</label>
+                       <select name="transport-assist" id="transport-assist">
+                            <option value="NULL">Select</option>
+                            <option value="Cash Assistance">Cash Assistance</option>
+                            <option value="Fuel Assistance">Fuel Assistance</option>
+                            <option value="Another Job">Another Job</option>
+                       </select>
+
+                    </div>
+                    <!--disaster-->
+                    <div id="members" class="disaster" >
+                        <h4>NATURAL DISASTER VICTIMS ASSISTANCE</h4><br>
+                        <label for="disaster-type" class="text">What Disaster:</label>
+                        <select name="disastertype" id="typedisaster">
+                            <option value="NULL">Select</option>
+                            <option value="Typhoons">Typhoons</option>
+                            <option value="Flood">Flood</option>
+                            <option value="Earthquake">Earthquake</option>
+                        </select>
+                       
+                        <br>
+                        <label for="members" class="text">Number of members affected:</label>
+                        <input type="text" name="members" class="input">
+                        
+                        <br>
+                        <label for="disaster_needs">Input What Assistance Need:</label>
+                        <textarea name="textdisasterneeds" id="textdisasterneeds"></textarea>
+                    </div>
+                    
+
+                    <!--senior-->
+                
+                    <div id="senior" class="seniors">
+                        <h4>SENIOR CITIZEN ASSISTANCE</h4><br>
+                        <label for="seniors">Status:</label>
+                        <select name="status" id="status">
+                            <option value="NULL">Select</option>
+                            <option value="Mobile/active">Mobile/active</option>
+                            <option value="Assisted Mobile">Assisted Mobile (uses cane, walker, or wheelchair)</option>
+                            <option value="Bedridden/Non-mobile">Bedridden/Non-mobile</option>
+                        </select>
+                        <br>
+                        <br>
+                        <!--senior medical-->
+                        <label for="medical" class="text">Medical Conditions:</label><br>
+                        <div class="option"><input type="checkbox" name="Medical_Conditions[]" value="None" class="ui-checkbox">None<br></div>
+                        <div class="option"><input type="checkbox" name="Medical_Conditions[]" value="Hypertension" class="ui-checkbox">Hypertension<br></div>
+                        <div class="option"><input type="checkbox" name="Medical_Conditions[]" value="Diabetes" class="ui-checkbox">Diabetes<br></div>
+                        <div class="option"><input type="checkbox" name="Medical_Conditions[]" value="Arthritis/Joint issues" class="ui-checkbox">Arthritis/Joint issues<br></div>
+                        <div class="option"><input type="checkbox" name="Medical_Conditions[]" value="Vision/Hearing impairment" class="ui-checkbox">Vision/Hearing impairment<br></div>
+                        <div class="option"><input type="checkbox" name="Medical_Conditions[]" value="Cognitive issues" class="ui-checkbox">Cognitive issues (e.g., Dementia, Alzheimer's)<br></div>
+                        <div class="option"><input type="checkbox" name="Medical_Conditions[]" value="Other" class="ui-checkbox">Other<br></div>
+                        
+                        <label for="medical">Other/s</label>
+                        <textarea name="seniormedical" id="seniormedical"></textarea><br>
+                        <br>
+                        <!--assistance-->
+                        <label for="assistance" class="text">Assistance Needed:</label><br>
+                        <div class="option"><input type="checkbox" name="needed[]" value="None" class="ui-checkbox">None<br></div>
+                        <div class="option"><input type="checkbox" name="needed[]" value="Medical/Medicines" class="ui-checkbox">Medical/Medicines<br></div>
+                        <div class="option"><input type="checkbox" name="needed[]" value="Maintenance Foods/Grocery packs" class="ui-checkbox">Maintenance Foods/Grocery packs<br></div>
+                        <div class="option"><input type="checkbox" name="needed[]" value="Assistive Devices (Wheelchair, cane, etc.)" class="ui-checkbox">Assistive Devices (Wheelchair, cane, etc.)<br></div>
+                        <div class="option"><input type="checkbox" name="needed[]" value="Financial/Cash Aid" class="ui-checkbox">Financial / Cash Aid<br></div>
+                        <div class="option"><input type="checkbox" name="needed[]" value="Companionship/Home visits" class="ui-checkbox">Companionship/Home visits<br></div>
+                        <div class="option"><input type="checkbox" name="needed[]" value="Other" class="ui-checkbox">Other<br></div>
+                        <label for="assistance">Other/s</label>
+                        <textarea name="seniorassistance" id="seniorassistance"></textarea><br>
+                    </div>
+
+                    <!--pwd-->
+                    <div id="pwd" class="pwdisability">
+                        <h4>PERSON WITH DISABILITY ASSISTANCE</h4><br>
+                        <label for="pwd">Select Disability:</label>
+                        <select name="pwithd" id="personwd" onchange="enableBrand(this)">
+                            <option value="NULL">Select</option>
+                            <option value="Visual Disability" >Visual Disability</option>
+                            <option value="Hearing Disability" >Hearing Disability </option>
+                            <option value="Orthopedic Disability" >Orthopedic Disability</option>
+                            <option value="Intellectual Disability" >Intellectual Disability</option>
+                            <option value="Psychosocial Disability" >Psychosocial Disability</option>
+                            <option value="Communication Disability" >Communication Disability</option>
+                            <option value="Chronic Illnesses" >Chronic Illnesses</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        
+                        
+                        <div id="options" class="options">
+                            <!--eyes-->
+                            <div id="eyes" class="EYES">
+                                <label for="mata" class="text">Assistance:</label><BR>
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Education Support" class="ui-checkbox">Education Support</div>
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Mobility Training" class="ui-checkbox">Mobility Training</div>
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Counseling and Support" class="ui-checkbox">Counseling and Support</div>
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Medical Assistance" class="ui-checkbox">Medical Assistance<br></div>
+                            </div>
+                            <!--hear-->
+                            <div id="hear" class="HEAR">
+                                <label for="tenga" class="text">Assistance:</label><br>
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Education Support" class="ui-checkbox">Education Support</div>
+                              
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Sign Language Training" class="ui-checkbox">Sign Language Training</div>
+                              
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Assistive Devices" class="ui-checkbox">Assistive Devices</div>
+                               
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Medical Services" class="ui-checkbox">Medical Services</div>
+                                <br>
+                            </div>
+                            <!--Orthopedic Disability-->
+                            <div id="limb" class="LIMB">
+                                <label for="loss_limb" class="text">Assistance:</label><br>
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Medical Assistance" class="ui-checkbox">Medical Assistance</div>
+                              
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Mobility Aids" class="ui-checkbox">Mobility Aids</div>
+                                <br>
+                            </div>
+                            <!--Intellectual Disability-->
+                            <div id="intellect" class="INTELLECT">
+                                <label for="intellect" class="text">Assistance:</label><br>
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Therapy Services" class="ui-checkbox">Therapy Services</div>
+                                <br>
+                            </div>
+                            <!--Psychosocial Disability-->
+                            <div id="Psychosocial" class="Psychosocial">
+                                <label for="Psychosocial" class="text">Assistance:</label><br>
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Mental Health Support" class="ui-checkbox">Mental Health Support</div>
+                                <br>
+                            </div>
+                            <!--Communication Disability-->
+                            <div id="speech" class="speech">
+                                <label for="Communication" class="text">Assistance:</label><br>
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Speech and Language Therapy" class="ui-checkbox">Speech and Language Therapy</div>
+                               
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Assistive Communication Devices" class="ui-checkbox">Assistive Communication Devices</div>
+                                <br>
+                            </div>
+                            <!--Chronic Illnesses-->
+                            <div id="chronic" name="chronic">
+                                <label for="Chronic" class="text">Assistance:</label><br>
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Medical Assistance" class="ui-checkbox">Medical Assistance</div>
+                               
+                                <div class="option"><input type="checkbox" name="optionsssistance[]" value="Financial Suppor" class="ui-checkbox">Financial Support</div>
+                                <br>
+                            </div>
+                            <!--other-->
+                            <div id="other" class="other">
+                                <label for="pwd" class="text">Other:</label>
+                                <textarea name="pwdtype" id="pwdtype"></textarea>
+                                <br>
+                                <label for="pwd">Assistance:</label>
+                                <textarea name="pwdtypeother" id="pwdtypeother"></textarea>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--medical assistance-->
+                  
+                    <div id="hospital" class="hospitals">
+                        <h4>MEDICAL ASSISTANCE</h4>
+                        <label for="medicalmedical" class="text">Assistance:</label>
+                        <select name="medicalhelp" id="medicalhelp" onchange="enableBrand(this)">
+                            <option value="NULL">Select</option>
+                            <option value="Medical Bill">Medical Bill</option>
+                            <option value="Provide Medicine/s">Provide Medicine/s</option>
+                            <option value="Cash Medicine">Cash Medicine</option>
+                            <option value="Medical Equipment/s">Medical Equipment/s</option>
+                        </select>
+                        <br>
+                        <div id="medicaloptions" name="medicaloptions">
+                            <!--medical bill-->
+                            <div id="bill" class="bill">
+                                <input type="hidden" name="MAX_FILE_SIZE" value="5000000" >
+                                <label for="bill_image" class ="valid-id">Choose ID Image</label>
+                                <input type="file" id="bill_image" name="bill_image" class="file-hidden">
+                                <span id="filename-display" class="filename-text">No file chosen</span>
+                            </div>
+
+                            <!--Provide Medicine/s-->
+                            <div id="medicine" class="medicine">    
+                                <input type="hidden" name="MAX_FILE_SIZE" value="5000000" >
+                                <label for="medicine_image" class ="valid-id">Upload Medicine Receipt</label>
+                                <input type="file" id="medicine_image" name="medicine_image" class="file-hidden">
+                                <span id="filename-display" class="filename-text">No file chosen</span>
+                            </div>
+                            <!--Cash Medicine-->
+                            <div id="cash" class="cash">
+                                <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+                                <label for="cash_image" class ="valid-id">Upload Receipt</label>
+                                <input type="file" id="cash_image" name="cash_imagee" class="file-hidden">
+                                <span id="filename-display" class="filename-text">No file chosen</span>
+
+                            </div>
+                            <!--Medical Equipment/s-->
+                            <div id="equipment" class="equipment">  
+
+                                <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+                                <label for="equipment_image" class ="valid-id">Upload Equipment Prescription</label>
+                                <input type="file" id="equipment_image" name="equipment_image" class="file-hidden">
+                                <span id="filename-display" class="filename-text">No file chosen</span>
+                                <br>
+                                <br>
+                                <label for="equipment">Choose Medical Equipment:</label>
+                                <select name="equip" id="equip" onchange="equipmentSelect(this)">
+                                    <option value="NULL">Select</option>
+                                    <option value="Wheelchair">Wheelchair</option>
+                                    <option value="crutch">Crutches</option>
+                                    <option value="walker">walker</option>
+                                    <option value="hearing aids">Hearing Aids</option>
+                                    <option value="other assistive devices">other assistive devices:</option>
+                                </select>
+
+                            </div>
+                            <!--other-->
+                            <div id="otherequipment" name="otherequipment" class="otherequipment">
+                                <label for="equipment">Other:</label>
+                                <textarea name="equiptypeother" id="equiptypeother"></textarea>
+                            </div>
+
+                        </div>
+
+                        
+                    </div>
+
+                    <!--education-->
+                    <div id="education" class="educations">
+                        <h4>EDUCATIONAL ASSISTANCE</h4>
+                        <br>
+                        <label for="education" class="text">Assistance</label>
+                        <select name="academic" id="academic" onchange="educationSelect(this)">
+                            <option value="NULL">Select</option>
+                            <option value="Tuition">Tuition</option>
+                            <option value="School Supplies">School Supplies</option>
+                            <option value="Student Loans">Student Loans</option>
+                        </select>
+                        <!--tuition-->
+                        <div id="tuition" class="tuition">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+                            <label for="tuition_image" class ="valid-id">Upload Tuition Fee</label>
+                            <input type="file" id="tuition_image" name="tuition_image" class="file-hidden">
+                            <span id="filename-display" class="filename-text">No file chosen</span>
+
+                        </div>
+
+                        <!--School Supplies-->
+                        <div id="supplies" class="supplies">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+                            <label for="supplies_image" class ="valid-id">Upload School Supplies Receipt</label>
+                            <input type="file" id="supplies_image" name="supplies_image" class="file-hidden">
+                            <span id="filename-display" class="filename-text">No file chosen</span>
+                        </div>
+
+                        <!--Student Loans-->
+                        <div id="loans" class="loans">
+                            <label for="loans">Loans:</label>
+                            <select name="money" id="money">
+                                <option value="NULL">Select</option>
+                                <option value="Php 5000">Php 5000</option>
+                                <option value="Php 10000">Php 10000</option>
+                                <option value="Php 15000">Php 15000</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                 
+                    <!--Burial Assistance-->
+                    <div id="burial" class="burial">
+                        <br>
+                        <h4>BURIAL ASSISTANCE</h4>
+                        <br>
+                        <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
+                        <label for="certificate-image" class ="valid-id">Upload Death Certificate</label>
+                        <input type="file" id="certificate-image" name="certificate-image" class="file-hidden">
+                        <span id="filename-display" class="filename-text">No file chosen</span>
+                        <br><br>
+                        <label for="burial" class="text">Burial Assistance:</label><br>
+                        <div class="option"><input type="checkbox" name="burial_assistance[]" value="Funeral Services" class="ui-checkbox">Funeral Services</div>
+                        <div class="option"><input type="checkbox" name="burial_assistance[]" value="Expenses for Wake" class="ui-checkbox">Expenses for Wake</div>
+                    </div>
+                    <br>
+                    <hr>
+                    <!--ID-->
+                    <br>
+                    <h3>VALID</h3>
+                    <br>
+                    <label for="id">Valid Id:</label>
+                        <select id="id" name="id">
+                            <option value="NULL">Select</option>
+                            <option value="e-Card">e-Card</option>
+                            <option value="Employee’s ID">Employee’s ID</option>
+                            <option value="Driver’s License">Driver’s License</option>
+                            <option value="Professional Regulation Commission (PRC) ID">Professional Regulation Commission (PRC) ID</option>
+                            <option value="Passport">Passport</option>
+                            <option value="Senior Citizen ID">Senior Citizen ID</option>
+                            <option value="SSS ID">SSS ID</option>
+                            <option value="Voter’s ID">Voter’s ID</option>
+                            <option value="PhilID/ePhilID">PhilID / ePhilID</option>
+                            <option value="NBI Clearance">NBI Clearance</option>
+                            <option value="Integrated Bar of the Philippines (IBP) ID">Integrated Bar of the Philippines (IBP) ID</option>
+                            <option value="Firearms License">Firearms License</option>
+                            <option value="AFPSLAI ID">AFPSLAI ID</option>
+                            <option value="PVAO ID">PVAO ID</option>
+                            <option value="AFP Beneficiary ID">AFP Beneficiary ID</option>
+                            <option value="BIR (TIN)">BIR (TIN)</option>
+                            <option value="Pag-ibig ID">Pag-ibig ID</option>
+                            <option value="Person’s With Disability (PWD) ID">Person’s With Disability (PWD) ID</option>
+                            <option value="Pantawid Pamilya Pilipino Program (4Ps) ID">Pantawid Pamilya Pilipino Program (4Ps) ID</option>
+                            <option value="Barangay ID">Barangay ID</option>
+                            <option value="Solo Parent ID">Solo Parent ID</option>
+                            <option value="Philippine Postal ID">Philippine Postal ID</option>
+                            <option value="Phil-health ID">Phil-health ID</option>
+                            <option value="School ID">School ID</option>
+                        </select>
+                    <br>
+                    <br>
+                    <label for="eamage" class="valid-id">Choose ID Image</label>
+                    <input type="file" id="eamage" name="eamage" class="file-hidden">
+                    <span id="filename-display" class="filename-text">No file chosen</span>
+                    <br>
+                    <br>
+                    <br>
+
+                    <button type="submit" class="submit">SUBMIT</button>
+
+                </form>
+            </div>
+        </div>
+        <!--account-->
+        <div id="account" class="section ">
+            <div id="search">
+                <h1>Search Application</h1>
+                <br>
+                    <input type="text" id="searchInput" placeholder="Enter Reference ID" class="reference">
+                <br>
+                    <button onclick="searchID()" class="searchbutton">Search</button>
+                    <br>
+                <div id="result"></div>
+            </div>
+
+        </div>
+        <!--cs-->
+        <div id="customer_service" class="section ">
+            <h1>For any concerns, please reach out to us by contacting us:</h1>
+            <br>
+            <h3>Mobile Number: +631234567899</h3>
+            <h3>Email: Ligtas_Pila@gmail.com</h3>
+        </div>
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>
